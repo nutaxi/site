@@ -22,15 +22,35 @@
           window.location.href = "https://play.google.com/store/apps/details?id=br.com.nutaxi.passenger.drivermachine";
         }
         if (getMobileOS() == "iOS") {
-          window.location.href = "https://apps.apple.com/us/app/nutaxi-cliente/id6459266115";
-        }
-        if (!getMobileOS()) {
-          document.getElementById('not-mobile').innerHTML = "if not mobile show page with all links to store";
+          window.location.href = "https://apps.apple.com/br/app/nutaxi-cliente/id6459266115";
         }
       };
     </script>
   </head>
   <body onload="DetectAndRedirect()">
-    <div id="not-mobile"></div>
+    <div class="container">
+      <a href="https://play.google.com/store/apps/details?id=br.com.nutaxi.passenger.drivermachine">
+        <img src="img/botao-and.png" alt="download android">
+      </a>
+      <a href="https://apps.apple.com/br/app/nutaxi-cliente/id6459266115">
+        <img src="img/botao-ios.png" alt="download ios">
+      </a>
+    </div>
+  
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </body>
 </html>
